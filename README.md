@@ -37,7 +37,6 @@ guess-number-game/
 ├── style.css          # CSS স্টাইল
 ├── app.js             # জাভাস্ক্রিপ্ট লজিক
 ├── README.md          # ডকুমেন্টেশন
-└── docs/              # অতিরিক্ত ডকুমেন্টেশন
 ```
 
 ## 🛠 টেকনোলজি
@@ -46,7 +45,6 @@ guess-number-game/
 - **CSS3** - স্টাইলিং ও রেসপন্সিভ ডিজাইন
 - **Vanilla JavaScript** - লজিক ও ইন্টারেক্টিভিটি
 - **localStorage** - স্কোর সেভ করা
-- **Google Fonts** - বাংলা ফন্ট সাপোর্ট
 
 ## ✨ ফিচারসমূহ
 
@@ -77,27 +75,6 @@ guess-number-game/
 - স্কোর কার্ড
 
 ## 🔧 ইনস্টলেশন
-
-### GitHub Pages এ ডিপ্লয়
-
-1. এই রিপোজিটরি ক্লোন করুন:
-   ```bash
-   git clone https://github.com/yeasin4745/guess-number-game.git
-   ```
-
-2. `guess-number-game` ফোল্ডারে যান:
-   ```bash
-   cd guess-number-game
-   ```
-
-3. GitHub Pages এ পুশ করুন:
-   ```bash
-   git add .
-   git commit -m "Initial commit"
-   git push origin main
-   ```
-
-4. GitHub এ গিয়ে Settings > Pages > Source: main branch নির্বাচন করুন
 
 ### লোকালি রান
 
@@ -137,33 +114,3 @@ php -S localhost:8000
 - নম্বর বাটন ক্লিক করেও নির্বাচন করা যায়
 - ভুল ইনপুট দিলে এরর মেসেজ দেখাবে
 
-## 📝 কন্ট্রিবিউশন
-
-কন্ট্রিবিউট করতে চান? ফর্ক করে পুল রিকুয়েস্ট করুন!
-
-1. ফর্ক করুন
-2. নতুন ব্রাঞ্চ তৈরি করুন (`git checkout -b feature/your-feature`)
-3. কমিট করুন (`git commit -m 'Add some feature'`)
-4. পুশ করুন (`git push origin feature/your-feature`)
-5. পুল রিকুয়েস্ট ওপেন করুন
-
-## 📄 লাইসেন্স
-
-MIT License - মুক্তভাবে ব্যবহার করতে পারেন
-
-## 🙏 কৃতজ্ঞতা
-
-- Google Fonts - বাংলা ফন্টের জন্য
-- Mistral AI - কোড সাহায্যের জন্য
-
-## 📞 যোগাযোগ
-
-তৈরি করেছেন: **Yeasin**
-
-- GitHub: [yeasin4745](https://github.com/yeasin4745)
-
----
-
-**তৈরি করা হয়েছে বাংলাদেশ থেকে** 🇧🇩
-
-*গেস নম্বর - মজার গেম, মজার সময়!*
