@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>গেস নম্বর গেম | Guess Number Game</title>
+    <meta name="description" content="একটি মজার নম্বর গেসিং গেম। আপনি কতগুলো সঠিক গেস করতে পারেন?">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1 class="game-title">গেস নম্বর</h1>
+            <p class="game-subtitle">Guess The Number</p>
+        </header>
+
+        <main class="game-main">
+            <!-- গেম সেটিংস -->
+            <section class="game-settings">
+                <div class="settings-card">
+                    <h2>গেম সেটআপ</h2>
+                    <div class="input-group">
+                        <label for="gameRounds">রাউন্ড সংখ্যা:</label>
+                        <input type="number" id="gameRounds" min="1" max="20" value="5">
+                        <span class="input-hint">(1-20 এর মধ্যে)</span>
+                    </div>
+                    <button id="startGame" class="btn btn-primary">গেম শুরু করুন</button>
+                </div>
+            </section>
+
+            <!-- গেম প্লে এরিয়া -->
+            <section class="game-play" id="gamePlaySection" style="display: none;">
+                <div class="game-info">
+                    <div class="score-display">
+                        <span class="score-item">
+                            <span class="score-label">জয়:</span>
+                            <span class="score-value" id="winCount">0</span>
+                        </span>
+                        <span class="score-separator">|</span>
+                        <span class="score-item">
+                            <span class="score-label">হার:</span>
+                            <span class="score-value" id="loseCount">0</span>
+                        </span>
+                        <span class="score-separator">|</span>
+                        <span class="score-item">
+                            <span class="score-label">রাউন্ড:</span>
+                            <span class="score-value" id="currentRound">0</span>
+                            <span class="score-slash">/</span>
+                            <span class="score-value" id="totalRounds">0</span>
+                        </span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+
+                <div class="guess-section">
+                    <h3>রাউন্ড <span id="roundNumber">1</span></h3>
+                    <p class="guess-instruction">একটি নম্বর গেস করুন (0 থেকে 4):</p>
+                    
+                    <div class="number-selector">
+                        <button class="number-btn" data-value="0">0</button>
+                        <button class="number-btn" data-value="1">1</button>
+                        <button class="number-btn" data-value="2">2</button>
+                        <button class="number-btn" data-value="3">3</button>
+                        <button class="number-btn" data-value="4">4</button>
+                    </div>
+
+                    <div class="input-alternative">
+                        <label for="guessInput">অথবা টাইপ করুন:</label>
+                        <input type="number" id="guessInput" min="0" max="4" placeholder="0-4">
+                        <button id="submitGuess" class="btn btn-guess">জমা দিন</button>
+                    </div>
+
+                    <div class="result-message" id="resultMessage"></div>
+                </div>
+
+                <div class="game-actions">
+                    <button id="endGame" class="btn btn-secondary">গেম শেষ করুন</button>
+                </div>
+            </section>
+
+            <!-- গেম ওভার -->
+            <section class="game-over" id="gameOverSection" style="display: none;">
+                <div class="game-over-card">
+                    <h2>গেম শেষ!</h2>
+                    <div class="final-result">
+                        <p>আপনার স্কোর:</p>
+                        <div class="final-score">
+                            <span class="final-win">✅ <span id="finalWin">0</span> জয়</span>
+                            <span class="final-lose">❌ <span id="finalLose">0</span> হার</span>
+                        </div>
+                        <div class="win-percentage">
+                            সাফল্যের হার: <span id="winPercentage">0%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="high-score">
+                        <p>সর্বোচ্চ স্কোর:</p>
+                        <p id="highScoreDisplay">-</p>
+                    </div>
+
+                    <div class="game-over-actions">
+                        <button id="playAgain" class="btn btn-primary">আবার খেলুন</button>
+                        <button id="saveScore" class="btn btn-save">স্কোর সেভ করুন</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- স্কোর হিস্টরি -->
+            <section class="score-history" id="scoreHistorySection" style="display: none;">
+                <div class="history-card">
+                    <h2>স্কোর হিস্টরি</h2>
+                    <div class="history-list" id="historyList">
+                        <p class="no-history">এখনো কোন স্কোর সেভ করা হয়নি।</p>
+                    </div>
+                    <button id="closeHistory" class="btn btn-secondary">বন্ধ করুন</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="game-footer">
+            <p>তৈরি করেছেন: <span class="author">Yeasin</span></p>
+            <p class="version">v1.0.0</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
